@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-     <title>Weather App</title>
-     <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-     <h2>{{>header}}</h2>
+    <h2>{{>header}}</h2>
 
-     <form id="form1"> Enter your city/country: <input type="text" id="address">
-          <button>Search</button>
-     </form>
-     {{!-- <p id="location"></p>
-     <p id="coordinates"></p>
-     <p id="temperature"></p>
-     <p id="feelsLike"></p>
-     <p id="humidity"></p>
-     <p id="windSpeed"></p>
-     <p id="condition"></p>
-     <p id="error"></p> --}}
-     <p class="label">Location: <span id="location"></span></p>
-     <p class="label">Coordinates: <span id="coordinates"></span></p>
-     <p class="label">Temperature: <span id="temperature"></span> °C</p>
-     <p class="label">Feels Like: <span id="feelsLike"></span> °C</p>
-     <p class="label">Humidity: <span id="humidity"></span> %</p>
-     <p class="label">Wind Speed: <span id="windSpeed"></span> km/h</p>
-     <p class="label">Condition: <span id="condition"></span></p>
-     <p id="error"></p>
+    <form id="weather-form">
+        Enter your city/country: <input type="text" id="address">
+        <button type="submit">Search</button>
+    </form>
 
-     <script src="js/script.js"></script>
+    <p id="error" class="error-message"></p>
+    
+    <div id="weather-info" style="display: none;">
+        <p class="label">Location: <span id="location"></span></p>
+        <p class="label">Coordinates: <span id="coordinates"></span></p>
+        <p class="label">Temperature: <span id="temperature"></span> °C</p>
+        <p class="label">Feels Like: <span id="feelsLike"></span> °C</p>
+        <p class="label">Humidity: <span id="humidity"></span> %</p>
+        <p class="label">Wind Speed: <span id="windSpeed"></span> km/h</p>
+        <p class="label">Condition: <span id="condition"></span></p>
+    </div>
+
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
