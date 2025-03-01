@@ -1,85 +1,137 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: sans-serif; /* Use a more readable font for the body */
-    line-height: 1.6; /* Improve line spacing for readability */
-    margin: 0; /* Reset default margin for better control */
-    background-color: #f4f4f4; /* Set a light background color */
-    color: #333; /* Set a dark text color for contrast */
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    min-height: 100vh;
+    padding: 2rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .header1 {
-    background-color: #8de2ef;
-    color: rgb(39, 93, 141);
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    margin: auto;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Style the form container */
-#form1 {
+/* Form styling */
+#weather-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 500px;
     display: flex;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    max-width: 400px;
-    margin: 20px auto; /* Center the form */
-    background-color: #f9f9f9;
-  }
+    flex-direction: column;
+    gap: 1rem;
+}
 
-  #address {
-    padding: 10px;
+#address {
+    padding: 0.8rem;
+    font-size: 1rem;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 10px;
-    flex-grow: 1; /* Allow input to expand */
-  }
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    transition: border 0.3s;
+}
 
-  #form1 button {
-    padding: 10px 15px;
-    background-color: #007bff;
+#address:focus {
+    border-color: #2193b0;
+}
+
+button {
+    padding: 0.8rem;
+    background-color: #2193b0;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  #form1 button:hover {
-    background-color: #0056b3;
-  }
-
-  #form1 input:focus, #form1 button:focus{
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle focus effect */
-  }
-
-/* Style the result paragraphs */
-
-p {
-    color: rgb(39, 93, 141);
-    font-family: sans-serif;
-    font-size: 1.2em;
-    text-align: left; /* Align text to the left */
-    margin: 10px auto;
-    display: flex; /* Enable flexbox for the paragraph */
-    align-items: center; /* Vertically align items */
-    padding-left: 20px; /* Add left padding */
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
-p span { /* Style the label (the text before the span) */
+button:hover {
+    background-color: #1a7a8b;
+}
+
+/* Error message */
+.error-message {
+    color: #d9534f;
     font-weight: bold;
-    color: #333;
-    margin-right: 10px; /* Add space between the label and the value */
-}
-/* Style the error paragraph differently */
-#error {
-    color: #d9534f; /* Red color for errors */
-    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-/* ... your existing CSS ... */
+/* Weather information card */
+#weather-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
 
-/* Initially hide the data paragraphs */
-p:not(#error) { /* Target all paragraphs except the error paragraph */
-    display: none;
+.label {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.label:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.label span {
+    font-weight: 600;
+    color: #2193b0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #weather-form {
+        padding: 1rem;
+    }
+
+    #weather-info {
+        padding: 1.5rem;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
 }
