@@ -1,0 +1,71 @@
+body {
+    font-family: sans-serif; /* Use a more readable font for the body */
+    line-height: 1.6; /* Improve line spacing for readability */
+    margin: 0; /* Reset default margin for better control */
+    background-color: #f4f4f4; /* Set a light background color */
+    color: #333; /* Set a dark text color for contrast */
+}
+
+.header1 {
+    background-color: #8de2ef;
+    color: rgb(39, 93, 141);
+    text-align: center;
+    padding: 10px 0;
+    margin: auto;
+}
+
+/* Style the form container */
+#form1 {
+    display: flex; /* Use flexbox for better layout control */
+    justify-content: center; /* Center the form horizontally */
+    margin: 20px auto; /* Add some space around the form */
+}
+
+/* Style the input field */
+#form1 input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px; /* Adjust width as needed */
+}
+
+/* Style the button */
+#form1 button {
+    padding: 8px 12px;
+    background-color: #8de2ef; /* Match header color */
+    color: rgb(39, 93, 141); /* Match header text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the result paragraphs */
+
+p {
+    color: rgb(39, 93, 141);
+    font-family: sans-serif;
+    font-size: 1.2em;
+    text-align: left; /* Align text to the left */
+    margin: 10px auto;
+    display: flex; /* Enable flexbox for the paragraph */
+    align-items: center; /* Vertically align items */
+    padding-left: 20px; /* Add left padding */
+}
+
+p span { /* Style the label (the text before the span) */
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px; /* Add space between the label and the value */
+}
+/* Style the error paragraph differently */
+#error {
+    color: #d9534f; /* Red color for errors */
+    font-weight: bold;
+}
+
+/* ... your existing CSS ... */
+
+/* Initially hide the data paragraphs */
+p:not(#error) { /* Target all paragraphs except the error paragraph */
+    display: none;
+}
