@@ -14,6 +14,7 @@ const feelsLikeF = document.getElementById('feelsLike')
 const humidityF = document.getElementById('humidity')
 const windSpeedF = document.getElementById('windSpeed')
 const conditionF = document.getElementById('condition')
+const labels = document.querySelectorAll('.labels')
 
 // async --> function return promise
 let weatherFun = async() =>{
@@ -24,13 +25,25 @@ let weatherFun = async() =>{
         console.log(data)
         if(data.error){
             errorF.innerText = data.error
-            locationF.innerText = ''
-            coordinatesF.innerText = ''
-            temperatureF.innerText = ''
-            feelsLikeF.innerText = ''
-            humidityF.innerText = ''
-            windSpeedF.innerText = ''
-            conditionF.innerText = ''
+            locationF.innerHTML = ''
+            coordinatesF.innerHTML = ''
+            temperatureF.innerHTML = ''
+            feelsLikeF.innerHTML = ''
+            humidityF.innerHTML = ''
+            windSpeedF.innerHTML = ''
+            conditionF.innerHTML = ''
+
+            // locationF.parentElement.style.display = 'none';
+            // coordinatesF.parentElement.style.display = 'none';
+            // temperatureF.parentElement.style.display = 'none';
+            // feelsLikeF.parentElement.style.display = 'none';
+            // humidityF.parentElement.style.display = 'none';
+            // windSpeedF.parentElement.style.display = 'none';
+            // conditionF.parentElement.style.display = 'none';
+
+            labels.forEach(label => {
+                label.style.display = 'none';
+            })
         }
         else {
             locationF.innerText = data.location

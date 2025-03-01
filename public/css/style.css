@@ -16,28 +16,42 @@ body {
 
 /* Style the form container */
 #form1 {
-    display: flex; /* Use flexbox for better layout control */
-    justify-content: center; /* Center the form horizontally */
-    margin: 20px auto; /* Add some space around the form */
-}
-
-/* Style the input field */
-#form1 input[type="text"] {
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px; /* Adjust width as needed */
-}
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto; /* Center the form */
+    background-color: #f9f9f9;
+  }
 
-/* Style the button */
-#form1 button {
-    padding: 8px 12px;
-    background-color: #8de2ef; /* Match header color */
-    color: rgb(39, 93, 141); /* Match header text color */
+  #address {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex-grow: 1; /* Allow input to expand */
+  }
+
+  #form1 button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
+    transition: background-color 0.3s ease;
+  }
+
+  #form1 button:hover {
+    background-color: #0056b3;
+  }
+
+  #form1 input:focus, #form1 button:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle focus effect */
+  }
 
 /* Style the result paragraphs */
 
